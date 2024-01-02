@@ -1,5 +1,5 @@
 {
-    "name": "Arduino Foundation",
+    "name": "ArduinoFoundation",
     "version": "0.1.0",
     "description": "A foundation data structure library for general Arduio projects.",
     "keywords": "data structure, array, dictionary",
