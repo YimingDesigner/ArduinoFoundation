@@ -1,0 +1,13 @@
+{
+    "files.associations": {
+        "sstream": "cpp",
+        "string": "cpp",
+        "vector": "cpp",
+        "type_traits": "cpp",
+        "__locale": "cpp",
+        "string_view": "cpp",
+        "bitset": "cpp",
+        "ostream": "cpp",
+        "iostream": "cpp"
+    }
+}
