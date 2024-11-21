@@ -1,8 +1,8 @@
 {
-    "name": "Arduino Foundation",
-    "version": "0.1.0",
-    "description": "A foundation data structure library for general Arduio projects.",
-    "keywords": "data structure, array, dictionary",
+    "name": "ArduinoFoundation",
+    "version": "0.2.0",
+    "description": "A fundamental Arduino library for general projects.",
+    "keywords": "array, command",
     "repository": {
         "type": "git",
         "url": "https://github.com/YimingDesigner/ArduinoFoundation.git"
@@ -14,11 +14,6 @@
             "maintainer": true
         }
     ],
-    "export": {
-        "exclude": [
-            "examples/*"
-        ]
-    },
     "license": "MIT",
     "dependencies": {
     },
