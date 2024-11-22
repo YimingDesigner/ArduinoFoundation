@@ -1,20 +1,26 @@
 #ifndef ARDUINO_FOUNDATION_COMMAND_H_
 #define ARDUINO_FOUNDATION_COMMAND_H_
 
+#include <Arduino.h>
+
 #ifndef COMMAND_BUFFER_SIZE
 #define COMMAND_BUFFER_SIZE 5
 #endif
-
-#include <Arduino.h>
+#ifndef SERIAL_COMMAND
+#define SERIAL_COMMAND Serial
+#endif
+#ifndef SERIAL_DEBUG
+#define SERIAL_DEBUG Serial
+#endif
 
 class _Command {
    private:
     int contentAvailable;
 
-    int available() { return Serial.available(); }
+    int available() { return SERIAL_COMMAND.available(); }
     
     char read() {
-        char c = Serial.read();
+        char c = SERIAL_COMMAND.read();
         if (c == ' ' || c == '\r' || c == '\n') {
             if (contentAvailable) {
                 argc += 1;
@@ -55,13 +61,23 @@ class _Command {
     }
 
     void printError() {
-        Serial.print("Command Error");
+        SERIAL_DEBUG.print("Command Error");
         if (argc != 0) {
-            Serial.print(", argv[0]: ");
-            Serial.print(argv[0]);
+            SERIAL_DEBUG.print(", argv[0]: ");
+            SERIAL_DEBUG.print(argv[0]);
         }
-        Serial.print(", argc: ");
-        Serial.println(argc);
+        SERIAL_DEBUG.print(", argc: ");
+        SERIAL_DEBUG.println(argc);
+    }
+
+    void printOK() {
+        SERIAL_DEBUG.print("Command OK");
+        if (argc != 0) {
+            SERIAL_DEBUG.print(", argv[0]: ");
+            SERIAL_DEBUG.print(argv[0]);
+        }
+        SERIAL_DEBUG.print(", argc: ");
+        SERIAL_DEBUG.println(argc);
     }
 };
 

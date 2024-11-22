@@ -1,6 +1,6 @@
 {
     "name": "ArduinoFoundation",
-    "version": "0.2.0",
+    "version": "0.2.1",
     "description": "A fundamental Arduino library for general projects.",
     "keywords": "array, command",
     "repository": {
