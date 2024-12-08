@@ -4,6 +4,7 @@
 SoftwareSerial Serial2(A4, A5);
 #define SERIAL_DEBUG Serial
 #define SERIAL_COMMAND Serial2
+#define COMMAND_BUFFER_SIZE 5
 #include <Command.h>
 
 void setup() {
