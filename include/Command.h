@@ -4,7 +4,7 @@
 #include <Arduino.h>
 
 #ifndef COMMAND_BUFFER_SIZE
-#define COMMAND_BUFFER_SIZE 5
+#define COMMAND_BUFFER_SIZE 3
 #endif
 #ifndef SERIAL_COMMAND
 #define SERIAL_COMMAND Serial
